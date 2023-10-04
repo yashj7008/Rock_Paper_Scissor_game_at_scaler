@@ -4,6 +4,8 @@ const resultText = document.querySelector('.result-text');
 
 const buttons = document.querySelectorAll('.button-class');
 
+const resultId = document.getElementById("result-id");
+
 let player;
 let computer;
 let result;
@@ -12,10 +14,21 @@ buttons.forEach(button => button.addEventListener("click", () => {
        
     player  = button.textContent;
     computerFn(); 
-    playerText.textContent = `Player: ${player}`;
-    computerText.textContent = `Computer: ${computer}`; // Use ${} for interpolation
-    resultText.textContent = winnerFuctionF(); 
+    playerText.textContent = `Player : ${player}`;
+    computerText.textContent = `Computer : ${computer}`; // Use ${} for interpolation
+    resultText.textContent = `Result : ${winnerFuctionF()}`; 
 }));
+
+
+/*function changeHeadlineStyle() {
+    resultId.style.color = "red";
+    resultId.style.fontWeight = "bold";
+}
+
+if ( result == "You Lose!"){
+     changeHeadlineStyle();
+ } 
+ */
 
 function computerFn(){
      
@@ -27,7 +40,6 @@ function computerFn(){
         case  2:
            computer  = 'Paper';
            break;
-
         case 3 :
            computer  = 'Scissor';
            break;
@@ -38,7 +50,7 @@ function winnerFuctionF(){
      if (player == computer)
       return "Draw!";
      else if (computer == "Rock")
-      return (player == "Paper" ) ? "You Win!" : "You Lose!";
+      return (player == "Paper" ) ? "You Win!"  : "You Lose! ";
      else if (computer == "Paper")
      return (player == "Scissor" ) ? "You Win!" : "You Lose!";
      else if (computer == "Scissor")

@@ -7,16 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="game-div">
-        <h1 class="player-text">Player: </h1>
-        <h1 class="computer-text">Computer: </h1>
-        <h1 class="result-text">Result: </h1>
+    <Section class="Game-body">
+        <Span id="big-headLine"> Lets Play the Game !</Span>
+        <div class="game-div">
+            <span>Select your Option </span>
+            <button class="button-class">Rock</button>
+            <button class="button-class">Paper</button>
+            <button class="button-class">Scissor</button>
 
-         <button class="button-class">Rock</button>
-         <button class="button-class">Paper</button>
-         <button class="button-class">Scissor</button>
-     </div>
+            <div class="innerRock">
+                <div>
+                    <img src="UserIcon.webp" alt="img not found">
+                 </div>
+                <h1 class="player-text">Player : </h1>
+            </div>
+            <div class="innerCom">
+                 <div>
+                    <img src="ComputerIcon.webp" alt="img not found">
+                 </div>
+                 <h1 class="computer-text">Computer : </h1>
+            </div>
+            
+              <h1 class="result-text" id="result-id">Result : </h1>  
+         </div>
 
+    </Section>
+     
      <script src="main.js" ></script>
      
 </body>
